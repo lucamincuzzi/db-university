@@ -1,6 +1,6 @@
 1. -- Selezione di tutti gli studenti nati nell'anno 1990
 SELECT `name`, `surname`, `fiscal_code`, YEAR(`date_of_birth`) AS `birth_year`
-FROM `students`
+FROM students
 WHERE YEAR(`date_of_birth`) = 1990;
 
 2. -- Selezione di tutti i corsi che valgono più di 10 CFU
@@ -12,7 +12,7 @@ WHERE `cfu` > 10;
 SELECT `name`, `surname`, `fiscal_code`, `date_of_birth`
 FROM students
 WHERE DATEDIFF(CURDATE(), `date_of_birth`) >= 365 * 31
-ORDER BY `date_of_birth` DESC;;
+ORDER BY `date_of_birth` DESC;
 
 4. -- Selezione di tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
 SELECT *
